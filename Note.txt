@@ -1,0 +1,13 @@
+#8C5473 - Rosa
+
+#061A26 - Azul escuro
+
+#0A96A6 - Azul
+
+#30D9D9 - Azul claro
+
+#D6D9D2 - Branco
+
+Fonte: Josefin Sans
+Fonte: Space Grotesk
+Fonte: Exo 2
