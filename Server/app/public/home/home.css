@@ -1,0 +1,74 @@
+.filter{
+    height: 100vh;
+    backdrop-filter: brightness(50%);
+}
+
+body{
+    min-height: 100%;
+    background: url("/home/img/background.webp") center no-repeat;
+    background-size: cover;
+
+    color: var(--light);
+}
+
+header{
+    padding: 2rem 4rem;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-left nav ul{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.header-left nav ul li{
+    list-style: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.header-left nav ul li:hover{
+    color: #d6d9d2ce;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+}
+
+.header-right select{
+    width: 15rem;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, 0.376);
+    color: var(--light);
+    cursor: pointer;
+}
+
+.header-right select option{
+    background-color: rgba(0, 0, 0, 0.376);
+}
+
+main{
+    padding: 4rem;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.main-container p{
+    width: 40rem;
+}
