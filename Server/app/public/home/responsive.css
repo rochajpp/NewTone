@@ -1,0 +1,37 @@
+@media screen and (max-width: 845px){
+    .header-right{
+        display: none;
+    }
+
+    .header-left{
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .header-left{
+        justify-content: center;
+    }
+    .header-left nav{
+        display: none;
+    }
+
+    .main-container{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-container h1{
+        display: none;
+    }
+
+    .main-container img{
+        display: block;
+    }
+
+    .main-container p{
+        width: 100%;
+    } 
+}
