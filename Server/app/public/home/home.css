@@ -43,22 +43,54 @@ header{
 
 .header-right{
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.header-right select{
-    width: 15rem;
-    height: 2rem;
-    background-color: rgba(0, 0, 0, 0.376);
+.select{
+    border: 1px solid blue;
+    padding: 1rem;
+    position: relative;
+}
+
+.box-select{
+    text-align: justify;
+    border: 1px solid var(--light);
+    background-color: rgba(0, 0, 0, 0.268);
+    padding: 0.5rem;
+    width: 14rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.options{
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.268);
+    width: 14rem;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.options a{
+    position: absolute;
+    text-decoration: none;
     color: var(--light);
     cursor: pointer;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 0.8rem 1rem;
+    transition: 0.5s;
 }
 
-.header-right select option{
-    background-color: rgba(0, 0, 0, 0.376);
+.options a:hover{
+    border: 1px solid var(--light);
+    opacity: 50%;
 }
-
-
 
 .main-container{
     padding: 4rem;
