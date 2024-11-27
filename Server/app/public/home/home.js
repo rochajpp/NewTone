@@ -4,6 +4,10 @@ function closeSelect(){
     const options = document.querySelector(".options");
     const optionsA = document.querySelectorAll(".options a");
 
+    const open = document.querySelector(".icon-open");
+
+    open.style.rotate = "0deg";
+
     optionsA.forEach((a, index) => {
         a.style.top = "0";      
      })
@@ -21,6 +25,10 @@ function closeSelect(){
 function openSelect(){
     const options = document.querySelector(".options");
     const optionsA = document.querySelectorAll(".options a");
+
+    const open = document.querySelector(".icon-open");
+
+    open.style.rotate = "180deg";
 
     options.style.display = "flex";
 
