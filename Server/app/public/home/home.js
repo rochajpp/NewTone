@@ -28,13 +28,11 @@ function openSelect(){
         options.style.top = "3rem";
     }, 1)
 
-    
-
     optionsA.forEach((a, index) => {
        if(index != 0){
             setTimeout(() => {
                 a.style.top = (index * 2.724) + "rem";
-            }, 90 * index);
+            }, 1 * index);
        }
     });
   
