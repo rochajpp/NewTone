@@ -92,3 +92,7 @@ main{
     width: 100%;
     cursor: pointer;
 }
+
+form button{
+    width: 100%;
+}
