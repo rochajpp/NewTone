@@ -21,7 +21,6 @@
 body, html{
     font-family: 'Josefin Sans', sans-serif;
     color: var(--darkBlue);
-    background-color: var(--light);
 }
 
 .btn{
