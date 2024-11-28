@@ -6,10 +6,31 @@
 
     <link rel="stylesheet" type="text/css" href="/main.css" />
     <link rel="stylesheet" type="text/css" href="/epic/epic.css" />
+    <link rel="stylesheet" type="text/css" href="/epic/responsive.css" />
     <link rel="icon" href="/icon.png" />
 
     <title>EPIC | Newtone</title>
 </head>
+    <span class="help">
+        <span class="help-icon" onclick="openSpan()"><ion-icon name="help-circle-outline"></ion-icon></span>
+
+        <h2>EPIC</h2>
+        <p>   
+            EPIC é um serviço da NASA que disponibiliza imagens policromáticas da
+            Terra capturadas ao longo de um dia específico. Essas fotos permitem
+            observar a rotação do planeta, além de fornecer informações sobre sua
+            posição em relação à Lua e ao Sol. 
+            <br >
+            <br >
+            Você pode escolher entre dois modos de visualização:
+            <br>
+            <br>
+            <strong>Natural:</strong> para imagens sem alterações, apresentando a Terra em suas cores reais.
+            <br>
+            <br>
+            <strong>Enfeitada:</strong> para imagens aprimoradas, com efeitos que destacam detalhes e aprimoram a visualização.
+        </p>
+    </span> 
     <body>
         <video src="/epic/assets/earth.mp4" autoplay loop muted></video>
 
@@ -18,6 +39,7 @@
                 <div class="header-left">
                     <a href="/"><h1>NEWTONE</h1></a>
                 </div>
+
             </div>
         </header>
 
@@ -30,8 +52,8 @@
                             <label>Tipo:</label>
                             <select>
                                 <option value="" selected disabled>Selecione o tipo da imagem</option>
-                                <option>Enfeitada</option>
-                                <option>Natural</option>
+                                <option value="enchanced">Aprimorada</option>
+                                <option value="natural">Natural</option>
                             </select>
                         </div>
 
@@ -39,6 +61,7 @@
                             <label>Data</label>
                             <select>
                                 <option value="" selected disabled>Selecione a data da imagem</option>
+                                <!-- Área de datas disponíveis -->
                             </select>
                         </div>
 
@@ -47,6 +70,8 @@
                 </div>
             </div>
         </main>
+
+        <script src="/epic/epic.js"></script>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

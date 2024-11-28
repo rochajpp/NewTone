@@ -1,0 +1,12 @@
+@media screen and (max-width: 580px){
+    .box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .header-container{
+        justify-content: center;
+        gap: 1rem;
+    }
+}
