@@ -1,8 +1,7 @@
 @media screen and (max-width: 845px){
-    .header-right{
+    .header-left nav{
         display: none;
     }
-
     .header-left{
         justify-content: space-between;
         width: 100%;
@@ -13,8 +12,9 @@
     .header-left{
         justify-content: center;
     }
-    .header-left nav{
-        display: none;
+
+    .header-container{
+        flex-direction: column;
     }
 
     .main-container{
