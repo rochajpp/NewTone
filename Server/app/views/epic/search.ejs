@@ -49,6 +49,15 @@
                             </div>
                         </div>
                     <%}%>
+                <%} else{ %>
+                    <p>
+                        Nenhuma imagem 
+                        <%if(typeImg == "natural"){%>
+                            natural
+                        <%} else {%>
+                            aprimorada
+                        <%}%> 
+                        disponível no dia <%=dateImg%></p>
                 <%}%>
             </div>
         </div>

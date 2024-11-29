@@ -41,6 +41,11 @@ main{
     height: 80%;
 }
 
+.main-container{
+    padding: 2rem 0;
+    color: var(--light);
+}
+
 .images{
     display: flex;
     flex-wrap: wrap;
