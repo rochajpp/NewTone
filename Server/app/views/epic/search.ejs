@@ -39,15 +39,29 @@
                         %>
 
                         <div class="box">
+                            <h2><%=elements[1]%></h2>
                             <a target="_blank" href="https://epic.gsfc.nasa.gov/archive/<%= typeImg %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png">
                                 <img src="https://epic.gsfc.nasa.gov/archive/<%= typeImg %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png" />
                             </a>
-                            <div class="info">
-                                <h2><%=elements[1]%></h2>
-
-                                <p></p>
+                                
+                                <div class="positions">
+                                    <div>
+                                        <h2>Lunar Position </h2>
+                                        <p>X: <%= data[i].lunar_j2000_position.x %></p>
+                                     
+                                        <p>Y: <%= data[i].lunar_j2000_position.y %></p>
+                                        
+                                        <p>Z: <%= data[i].lunar_j2000_position.z %></p>
+                                    </div>
+                                    <div>
+                                        <h2>Solar Position </h2>
+                                        <p>X: <%= data[i].sun_j2000_position.x %></p>
+                                        <p>Y: <%= data[i].sun_j2000_position.y %></p>
+                                        <p>Z: <%= data[i].sun_j2000_position.z %></p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                    
                     <%}%>
                 <%} else{ %>
                     <p>

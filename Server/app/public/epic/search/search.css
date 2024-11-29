@@ -52,18 +52,46 @@ main{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    
+}
+
+.images h2{
+    text-align: center;
 }
 
 .box{
+    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
-}
-img{
-    width: 20rem;
+    padding: 2rem 0;
+        width: 20rem;
+
 }
 
-.info{
+img{
+   width: 100%;
+   border: 1px solid var(--light);
+    
+}
+
+.positions{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: var(--light);
+    gap: 2rem;
+    background-color: var(--darkBlue);
+    border: 1px solid var(--light);
+    padding: 2rem;
+    width: 100%;
+}
+
+.positions div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
