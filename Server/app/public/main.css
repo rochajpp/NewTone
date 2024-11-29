@@ -40,3 +40,13 @@ body, html{
 .btn-pr{
     background-color: var(--darkBlue);
 }
+
+body::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: var(--darkBlue);
+    
+}
+body::-webkit-scrollbar-thumb{
+    border-radius: 5rem;
+    background-color: var(--light); 
+}

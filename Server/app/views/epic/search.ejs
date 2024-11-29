@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+    <link rel="stylesheet" type="text/css" href="/epic/search/search.css" />
+    <link rel="stylesheet" type="text/css" href="/epic/search/responsive.css" />
+    <link rel="icon" href="/icon.png" />
+
+    <title>EPIC | Newtone</title>
+</head>
+<body>
+    <video src="/epic/assets/earth.mp4" autoplay loop muted></video>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="/epic"><h1>NEWTONE</h1></a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+
+            <div class="images">
+                <%if(data.length > 0){%>
+                    <% for(var i = 0; i < data.length; i++){ %>
+                        <% 
+                            let elements = data[i].date.split(" "); 
+                            let date = elements[0];
+                            date = date.split("-");
+                            let dateString = " ";
+                                    
+                            dateString = dateString + date[0];
+                            dateString = dateString + date[1];
+                            dateString = dateString + date[2]                 
+                        %>
+
+                        <div class="box">
+                            <a target="_blank" href="https://epic.gsfc.nasa.gov/archive/<%= typeImg %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png">
+                                <img src="https://epic.gsfc.nasa.gov/archive/<%= typeImg %>/<%= date[0] %>/<%= date[1] %>/<%= date[2] %>/png/<%= data[i].image %>.png" />
+                            </a>
+                            <div class="info">
+                                <h2><%=elements[1]%></h2>
+
+                                <p></p>
+                            </div>
+                        </div>
+                    <%}%>
+                <%}%>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
