@@ -17,21 +17,21 @@
         flex-direction: column;
     }
 
-    .main-container{
+    .home-container{
         justify-content: center;
         align-items: center;
         text-align: center;
     }
 
-    .main-container h1{
+    .home-container h1{
         display: none;
     }
 
-    .main-container img{
+    .home-container img{
         display: block;
     }
 
-    .main-container p{
+    .home-container p{
         width: 100%;
     } 
 }
