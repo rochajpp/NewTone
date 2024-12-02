@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+    <link rel="stylesheet" type="text/css" href="/iss/iss.css" />
+    <link rel="stylesheet" type="text/css" href="/iss/responsive.css" />
+
+    <link rel="icon" href="/icon.png" />
+    <title>ISS | Newtone</title>
+</head>
+<body>
+    <img class="image" src="/iss/assets/iss.webp" />
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="/"><h1>NEWTONE</h1></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <section class="map">
+                <div class="map-container">
+                    <h1>Localização da ISS</h1>
+                    <br>
+                    <br>
+                    <div class="map-area">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="info">
+                <div class="info-container">
+                    <h1>Informações</h1>
+                    <br>
+                    <div class="info-desc">
+                        <div class="lat">
+                            <h2>Latitude: </h2>
+                            <p></p>
+                        </div>
+                        <div class="long">
+                            <h2>Longitude: </h2>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/iss/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa5q-jmH3lTRSa9rsXWzDGGhWnM9JQjeY&callback=initMap"></script>
+</body>
+</html>
