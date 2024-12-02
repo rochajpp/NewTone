@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+    <link rel="stylesheet" type="text/css" href="/apod/apod.css" />
+
+    <link rel="icon" href="/icon.png" />
+    <title>APOD | Newtone</title>
+</head>
+<body>
+    <img class="image" src="/apod/assets/background.webp" />
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="/"><h1>NEWTONE</h1></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <a href="<%=data.url%>" class="image-data" target="_blank">
+                <% if(data.media_type == "image"){ %>
+                    <img src="<%=data.url%>" />
+                <% } else {%>
+                    <iframe src="<%=data.url%>"></iframe>
+                <%}%>
+            </a>
+            <div class="info">
+                <h1><%=data.title%></h1>
+                <br>
+                <h2><%=data.date%></h2>
+                <br>
+                <p><%=data.explanation%></p>
+                <br>
+                <% if(data.copyright != undefined){ %>
+                    <h2>₢Copyright <%=data.copyright%></h2>
+                <%}%>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
