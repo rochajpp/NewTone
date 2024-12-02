@@ -1,65 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="main.css" />
-        <link rel="stylesheet" type="text/css" href="home/home.css" />
-        <link rel="stylesheet" type="text/css" href="home/responsive.css" />
-        <link rel="icon" href="icon.png" />
+<html lang="pt-br">
 
-        <title>Início | Newtone</title>
-    </head>
-    <div class="filter">
-        <body>
-            <header>
-                <div class="header-container">
-                    <div class="header-left">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="home/home.css" />
+    <link rel="stylesheet" type="text/css" href="home/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="home/about.css" />
+    <link rel="icon" href="icon.png" />
+
+    <title>Início | Newtone</title>
+</head>
+
+<body>
+    <a class="top" href="#">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
+    <img class="image" src="home/img/background.webp" />
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <h1>NEWTONE</h1>
+                <nav>
+                    <ul>
+                        <a href="#">
+                            <li>Início</li>
+                        </a>
+                        <a href="#about">
+                            <li>Sobre</li>
+                        </a>
+                        <li>Contato</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="select">
+                    <div class="box-select">
+                        Serviços
+                        <ion-icon class="icon-open" name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <div class="options">
+                        <a href="/iss">ISS</a>
+                        <a href="/apod">APOD</a>
+                        <a href="/epic">EPIC</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <section class="home">
+                <div class="home-container">
+                    <h1>NEWTONE</h1>
+                    <img src="icon.png">
+                    <p>
+                        Descubra uma nova forma de explorar o universo com
+                        as fascinantes curiosidades astronômicas que o site
+                        oferece, proporcionando uma perspectiva única para
+                        enxergar o cosmos sob um novo tom.
+                    </p>
+                    <a href="#about"><button class="btn btn-pr">Começar!</button></a>
+                </div>
+            </section>
+            <section id="about" class="about">
+                <div class="about-container">
+                    <h1>Sobre</h1>
+
+                    <p>
+                        Aqui disponibilizamos dados astronômicos fornecidos por serviços da 
+                        NASA e de outras empresas especializadas no setor espacial. Atualmente,
+                        oferecemos três serviços principais:
+
+                        <br>
+                        <br>
+
+                        <a href="/apod"><strong>- APOD (Astronomy Picture of the Day): </strong></a> Uma imagem diária 
+                        diretamente da NASA, acompanhada por uma descrição detalhada sobre o conteúdo
+                        e seu contexto astronômico.
+
+                        <br>
+                        <br>
+
+                        <a href="/iss"><strong>- ISS (International Space Station): </strong></a>Exibe a localização 
+                        em tempo real da Estação Espacial Internacional, permitindo acompanhar seu 
+                        trajeto ao redor da Terra.
+
+                        <br>
+                        <br>
+
+                        <a href="/epic"><strong>- EPIC (Earth Polychromatic Imaging Camera): </strong></a> Uma coleção 
+                        de imagens policromáticas da Terra capturadas pela NASA, com opção de 
+                        selecionar a data. São oferecidas versões com cores naturais e aprimoradas,
+                        destacando detalhes impressionantes do nosso planeta.
+                    </p>
+
+                    <div class="about-logo">
                         <h1>NEWTONE</h1>
-                        <nav>
-                            <ul>
-                                <li>Início</li>
-                                <li>Sobre</li>
-                                <li>Contato</li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="header-right">
-                        <div class="select">
-                            <div class="box-select">
-                                Serviços
-                                <ion-icon class="icon-open" name="chevron-down-outline"></ion-icon>
-                            </div>
-                            <div class="options">
-                                <a href="/iss">ISS</a>
-                                <a href="/apod">APOD</a>
-                                <a href="/epic">EPIC</a>
-                            </div>
-                        </div>
+                        <p>(Para voltar para a página anterior aperte na logo NEWTONE)</p>
                     </div>
                 </div>
-            </header>
-            <main>
-                <div class="main-container">
-                    <section class="home">
-                        <div class="home-container">
-                            <h1>NEWTONE</h1>
-                            <img src="icon.png">
-                            <p>Descubra uma nova forma de explorar o universo com
-                                as fascinantes curiosidades astronômicas que o site
-                                oferece, proporcionando uma perspectiva única para
-                                enxergar o cosmos sob um novo tom.
-                            </p>
-                            <button class="btn btn-pr">Começar!</button>
-                        </div>
-                    </section>
-                </div>
-            </main>
+            </section>
+        </div>
+    </main>
 
-            <script src="home/home.js"></script>
+    <script src="home/home.js"></script>
 
-            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        </body>
-    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

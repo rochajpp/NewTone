@@ -51,3 +51,14 @@ function openSelect(){
 select.onclick = openSelect;
 
 
+document.addEventListener('scroll', () => {
+    const top = document.querySelector(".top");
+
+    if(scrollY > 0){
+        top.style.bottom = "2rem";
+
+        
+    } else{
+        top.style.bottom = "-100vh"
+    }
+})
