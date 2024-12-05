@@ -15,7 +15,7 @@
 
 .info{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;    
     gap: 2rem;
@@ -33,6 +33,7 @@
     color: var(--light);
     transition: 0.5s;
     gap: 1rem;
+    width:100%;
 }
 
 .box-info strong{
