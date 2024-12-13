@@ -1,8 +1,3 @@
-module.exports.main = (app, req, res) => {
-    res.render("iss/iss");
-    return;
-}
-
 module.exports.data = (app, req, res) => {
     const axios = require('axios');
 
