@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 const Home = lazy(() => import('./pages/Home/Home.jsx'));
 const Apod = lazy(() => import('./pages/Apod/Apod.jsx'));
+const Iss = lazy(() => import('./pages/Iss/Iss.jsx'));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/apod" element={<Apod />} />
+        <Route path="/iss" element={<Iss />} />
       </Routes>
     </Router>
   )
