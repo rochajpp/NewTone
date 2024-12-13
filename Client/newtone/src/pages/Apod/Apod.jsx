@@ -8,6 +8,8 @@
 
         useEffect(() => {
 
+            document.documentElement.lang = "en";
+
             async function getDataApi(endpoint){
                 const base = "http://localhost:8080";
                 const url = base + endpoint;

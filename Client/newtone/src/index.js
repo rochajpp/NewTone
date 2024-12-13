@@ -49,18 +49,3 @@ function openSelect(){
 }
 
 select.onclick = openSelect;
-
-
-document.addEventListener('scroll', () => {
-    const top = document.querySelector(".top");
-
-    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-    if(scrollY == windowHeight){
-        top.style.bottom = "-100vh";
-    } else if(scrollY > 0){
-        top.style.bottom = "2rem";
-    } else{
-        top.style.bottom = "-100vh"
-    }
-})
