@@ -10,9 +10,10 @@ require('dotenv').config();
 app.set("views", "./app/views");
 app.set("view engine", "ejs");
 
+app.use(cors());
 app.use(express.static("./app/public"));
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cors());
+
 
 consign()
     .include("./app/controllers")

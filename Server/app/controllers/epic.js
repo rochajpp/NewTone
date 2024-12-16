@@ -1,12 +1,17 @@
 module.exports.main = (app, req, res) => {
     const axios = require('axios');
 
-    axios.get("https://epic.gsfc.nasa.gov/api/natural/all")
+    axios.get("https://epic.gsfc.nasa.gov/api/natural/all", {timeout: 1000})
         .then(response => {
             res.send(response.data);
             return;
         })
         .catch(error => {
+            
+            if(error.code === 'ECONNABORTED'){
+                console.error("Tempo limite atingido");
+            }
+
             res.send(error);
             return;
         })

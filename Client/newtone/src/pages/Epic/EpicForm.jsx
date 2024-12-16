@@ -5,6 +5,7 @@ import './EpicForm.css'
 function EpicForm() {
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState({});
+    const [err, setErr] = useState(null);
 
     useEffect(() => {
         async function getDataApi(endpoint) {
@@ -16,31 +17,57 @@ function EpicForm() {
                 return data;
             } catch (err) {
                 console.log(err);
+                setErr(err);
                 return;
             }
         }
-    
+
         async function init() {
             const data = await getDataApi("/epic");
             setData(data);
             setLoading(false);
-        }
-    
-        init();
-    })
 
-    if(loading){
-        return(
+            const help = document.querySelector(".help");
+
+            help.onmouseover = () => {
+                const span = document.querySelector(".help");
+                span.style.right = "0";
+            }
+
+            help.onmouseout = () => {
+                const span = document.querySelector(".help");
+                span.style.right = "-40rem";
+            }
+
+
+        }
+
+        init();
+    }, [])
+
+    if (loading) {
+        return (
             <>
                 <p>Carregando...</p>
             </>
         )
     }
-    
+
+    if (err != null) {
+        return (
+            <>
+                <h1>Erro no requerimento de dados</h1>
+                <h2>É possível que os servidores estejam com problemas temporários</h2>
+                <h3>Tente nomanete mais tarde</h3>
+                <p>{err}</p>
+            </>
+        )
+    }
+
     return (
         <>
-            <span class="help">
-                <span class="help-icon" onclick="openSpan()"><ion-icon name="help-circle-outline"></ion-icon></span>
+            <span className="help">
+                <span className="help-icon"><ion-icon name="help-circle-outline"></ion-icon></span>
 
                 <h2>EPIC</h2>
                 <p>
@@ -60,34 +87,34 @@ function EpicForm() {
                 </p>
             </span>
 
-            <video src="/epic/assets/earth.mp4" autoplay loop muted></video>
+            <video src="../src/assets/earth.mp4" autoPlay loop muted></video>
 
-            <div class="main-container">
-                <div class="box">
-                    <form action="/epic/search" method="POST">
+            <div className="main-container">
+                <div className="box">
+                    <form action="http://localhost:8080/epic/search" method="POST">
                         <h1>EPIC</h1>
-                        <div class="input-area">
+                        <div className="input-area">
                             <label>Tipo:</label>
-                            <select name="type" required>
-                                <option value="" selected disabled>Selecione o tipo da imagem</option>
+                            <select name="type" defaultValue="" required>
+                                <option value="" disabled>Selecione o tipo da imagem</option>
                                 <option value="enhanced">Aprimorada</option>
                                 <option value="natural">Natural</option>
                             </select>
                         </div>
 
-                        <div class="input-area">
+                        <div className="input-area">
                             <label>Data</label>
-                            <select name="date" required>
-                                <option value="" selected disabled>Datas disponíveis</option>
-                                {data.map((data, key) => (
-                                    <option value={data.date}>{data.date}</option>
-                                ))}
-
-
+                            <select name="date" defaultValue="" required>
+                                <option value="" disabled>Datas disponíveis</option>
+                                {data.length > 0
+                                    ? data.map((data, key) => (
+                                        <option key={key} value={data.date}>{data.date}</option>
+                                    ))
+                                    : <option disabled value="">Nenhuma data disponível</option>}
                             </select>
                         </div>
 
-                        <button class="btn btn-pr">Pesquisar</button>
+                        <button className="btn btn-pr">Pesquisar</button>
                     </form>
                 </div>
             </div>
