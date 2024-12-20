@@ -7,7 +7,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 const Home = lazy(() => import('./pages/Home/Home.jsx'));
 const Apod = lazy(() => import('./pages/Apod/Apod.jsx'));
 const Iss = lazy(() => import('./pages/Iss/Iss.jsx'));
-const EpicForm = lazy(() => import('./pages/Epic/EpicForm.jsx'));
+const Epic = lazy(() => import('./pages/Epic/Epic.jsx'));
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/apod" element={<Apod />} />
         <Route path="/iss" element={<Iss />} />
-        <Route path="/epic" element={<EpicForm />} />
+        <Route path="/epic" element={<Epic />} />
       </Routes>
     </Router>
   )

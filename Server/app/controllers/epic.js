@@ -21,6 +21,8 @@ module.exports.images = (app, req, res) =>{
     const data = req.body;
     const axios = require('axios');
 
+    console.log(data);
+
     axios.get("https://epic.gsfc.nasa.gov/api/" + data.type + "/date/" + data.date)
         .then(response => {
             res.send({data: response.data, dateImg: data.date, typeImg: data.type});
